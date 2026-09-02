@@ -1,0 +1,262 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * ============================================================
+ * DESIGN SYSTEM — iOS / Liquid Glass inspired
+ * ============================================================
+ * Want a different accent colour? Change --accent-base in :root
+ * (and optionally in .dark) — everything else derives from it.
+ * All colours use oklch.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 3px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 6px);
+  --radius-2xl: calc(var(--radius) + 12px);
+  --radius-3xl: calc(var(--radius) + 20px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-glass: var(--glass);
+  --color-glass-strong: var(--glass-strong);
+  --color-glass-border: var(--glass-border);
+  --color-hairline: var(--hairline);
+
+  --font-sans:
+    ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+
+  --shadow-glass: 0 1px 1px oklch(0 0 0 / 4%), 0 12px 32px -12px oklch(0 0 0 / 14%);
+  --shadow-float: 0 2px 6px oklch(0 0 0 / 6%), 0 24px 56px -20px oklch(0 0 0 / 22%);
+  --shadow-accent: 0 10px 30px -12px var(--accent-shadow);
+
+  --ease-ios: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+:root {
+  --radius: 1rem;
+
+  /* ---- Accent (change me) ---- */
+  --accent-base: oklch(0.6 0.184 253);
+  --accent-shadow: oklch(0.6 0.184 253 / 45%);
+
+  --background: oklch(0.985 0.002 250);
+  --foreground: oklch(0.2 0.012 260);
+
+  --card: oklch(1 0 0);
+  --card-foreground: var(--foreground);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--foreground);
+
+  --primary: var(--accent-base);
+  --primary-foreground: oklch(0.99 0 0);
+
+  --secondary: oklch(0.955 0.004 250);
+  --secondary-foreground: oklch(0.3 0.012 260);
+
+  --muted: oklch(0.955 0.004 250);
+  --muted-foreground: oklch(0.5 0.014 258);
+
+  --accent: oklch(0.95 0.02 253);
+  --accent-foreground: oklch(0.38 0.12 253);
+
+  --destructive: oklch(0.58 0.21 22);
+  --destructive-foreground: oklch(0.99 0 0);
+
+  --border: oklch(0.9 0.005 255);
+  --input: oklch(0.9 0.005 255);
+  --ring: var(--accent-base);
+
+  /* ---- Liquid Glass surfaces ---- */
+  --glass: oklch(1 0 0 / 62%);
+  --glass-strong: oklch(1 0 0 / 82%);
+  --glass-border: oklch(1 0 0 / 70%);
+  --hairline: oklch(0.55 0.01 255 / 14%);
+
+  --mesh-1: oklch(0.85 0.09 253 / 40%);
+  --mesh-2: oklch(0.88 0.07 205 / 34%);
+  --mesh-3: oklch(0.9 0.06 300 / 26%);
+}
+
+.dark {
+  --accent-base: oklch(0.7 0.16 250);
+  --accent-shadow: oklch(0.7 0.16 250 / 35%);
+
+  --background: oklch(0.17 0.008 265);
+  --foreground: oklch(0.97 0.002 250);
+
+  --card: oklch(0.225 0.009 265);
+  --card-foreground: var(--foreground);
+  --popover: oklch(0.225 0.009 265);
+  --popover-foreground: var(--foreground);
+
+  --primary: var(--accent-base);
+  --primary-foreground: oklch(0.16 0.01 265);
+
+  --secondary: oklch(0.27 0.01 265);
+  --secondary-foreground: oklch(0.95 0.002 250);
+
+  --muted: oklch(0.27 0.01 265);
+  --muted-foreground: oklch(0.72 0.012 258);
+
+  --accent: oklch(0.3 0.04 253);
+  --accent-foreground: oklch(0.85 0.09 253);
+
+  --destructive: oklch(0.66 0.19 22);
+  --destructive-foreground: oklch(0.99 0 0);
+
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: var(--accent-base);
+
+  --glass: oklch(0.27 0.012 265 / 55%);
+  --glass-strong: oklch(0.24 0.012 265 / 80%);
+  --glass-border: oklch(1 0 0 / 12%);
+  --hairline: oklch(1 0 0 / 10%);
+
+  --mesh-1: oklch(0.45 0.13 253 / 34%);
+  --mesh-2: oklch(0.4 0.1 205 / 28%);
+  --mesh-3: oklch(0.42 0.11 300 / 22%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-foreground);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+/* ---- Reusable surface utilities ---- */
+
+@utility glass {
+  background-color: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+}
+
+@utility glass-strong {
+  background-color: var(--glass-strong);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+}
+
+/* Specular top highlight, the signature "liquid glass" edge */
+@utility glass-sheen {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+      to bottom,
+      oklch(1 0 0 / 45%) 0%,
+      oklch(1 0 0 / 6%) 22%,
+      transparent 60%
+    );
+    opacity: 0.9;
+  }
+}
+
+.dark .glass-sheen::before {
+  background: linear-gradient(
+    to bottom,
+    oklch(1 0 0 / 12%) 0%,
+    oklch(1 0 0 / 3%) 24%,
+    transparent 60%
+  );
+}
+
+/* Soft ambient mesh used behind the hero */
+@utility ambient-mesh {
+  background-image:
+    radial-gradient(60% 50% at 15% 0%, var(--mesh-1), transparent 70%),
+    radial-gradient(50% 45% at 85% 10%, var(--mesh-2), transparent 70%),
+    radial-gradient(45% 40% at 50% 100%, var(--mesh-3), transparent 70%);
+}
+
+@utility hairline-t {
+  border-top: 1px solid var(--hairline);
+}
+
+@utility text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--foreground) 0%,
+    color-mix(in oklab, var(--foreground) 55%, var(--accent-base)) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
