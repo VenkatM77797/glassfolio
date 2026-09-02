@@ -45,13 +45,13 @@ export function Navigation() {
                 aria-current={isActive ? "true" : undefined}
                 className={cn(
                   "relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors",
-                  isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground",
+                   isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground",
                 )}
               >
                 {isActive ? (
                   <motion.span
                     layoutId="nav-pill-desktop"
-                    className="absolute inset-0 rounded-full bg-secondary"
+                    className="absolute inset-0 rounded-full bg-black/5 ring-1 ring-black/10 dark:bg-white/15 dark:ring-white/10"
                     transition={{ type: "spring", stiffness: 380, damping: 32 }}
                   />
                 ) : null}
