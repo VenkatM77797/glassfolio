@@ -20,7 +20,7 @@ export function SectionHeading({
   return (
     <AnimatedContainer
       className={cn(
-        "flex flex-col gap-3",
+        "flex flex-col items-start gap-3",
         align === "center" && "items-center text-center",
         className,
       )}
