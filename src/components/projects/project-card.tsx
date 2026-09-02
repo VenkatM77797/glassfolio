@@ -66,9 +66,9 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
               href={project.github}
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
-              <Github className="size-3.5" aria-hidden="true" />
+              <Github className="size-5" aria-hidden="true" />
               Code
             </a>
           ) : null}
@@ -77,9 +77,9 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
               href={project.demo}
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-1.5 text-xs font-medium text-primary transition-opacity hover:opacity-80"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-opacity hover:opacity-80"
             >
-              <ExternalLink className="size-3.5" aria-hidden="true" />
+              <ExternalLink className="size-4.5" aria-hidden="true" />
               Live demo
             </a>
           ) : null}
