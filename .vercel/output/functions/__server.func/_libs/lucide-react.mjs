@@ -489,36 +489,6 @@ var MapPin = createLucideIcon("map-pin", [["path", {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var Monitor = createLucideIcon("monitor", [
-	["rect", {
-		width: "20",
-		height: "14",
-		x: "2",
-		y: "3",
-		rx: "2",
-		key: "48i651"
-	}],
-	["line", {
-		x1: "8",
-		x2: "16",
-		y1: "21",
-		y2: "21",
-		key: "1svkeh"
-	}],
-	["line", {
-		x1: "12",
-		x2: "12",
-		y1: "17",
-		y2: "21",
-		key: "vw1qmm"
-	}]
-]);
-/**
-* @license lucide-react v0.575.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
 var Moon = createLucideIcon("moon", [["path", {
 	d: "M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401",
 	key: "kfwtm"
@@ -697,4 +667,4 @@ var X = createLucideIcon("x", [["path", {
 	key: "d8bk6v"
 }]]);
 //#endregion
-export { ArrowDown as A, Download as C, Check as D, ChevronDown as E, Building2 as O, ExternalLink as S, Cloud as T, GraduationCap as _, Sun as a, Folder as b, Send as c, MapPin as d, Mail as f, House as g, Layers as h, Twitter as i, Briefcase as k, Moon as l, LayoutGrid as m, Wrench as n, Sparkles as o, Linkedin as p, User as r, Server as s, X as t, Monitor as u, Globe as v, Database as w, FileText as x, Github as y };
+export { Database as C, Building2 as D, Check as E, Briefcase as O, Download as S, ChevronDown as T, Globe as _, Sun as a, FileText as b, Send as c, Mail as d, Linkedin as f, GraduationCap as g, House as h, Twitter as i, ArrowDown as k, Moon as l, Layers as m, Wrench as n, Sparkles as o, LayoutGrid as p, User as r, Server as s, X as t, MapPin as u, Github as v, Cloud as w, ExternalLink as x, Folder as y };

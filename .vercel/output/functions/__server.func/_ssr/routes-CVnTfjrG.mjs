@@ -1,33 +1,25 @@
 import { r as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
-import { n as portfolio, r as useTheme } from "./router-tw2k3TJ9.mjs";
+import { n as portfolio, r as useTheme } from "./router-BjmwlhvO.mjs";
 import { n as motion, r as AnimatePresence, t as useInView } from "../_libs/framer-motion+[...].mjs";
-import { A as ArrowDown, C as Download, D as Check, E as ChevronDown, O as Building2, S as ExternalLink, T as Cloud, _ as GraduationCap, a as Sun, b as Folder, c as Send, d as MapPin, f as Mail, g as House, h as Layers, i as Twitter, k as Briefcase, l as Moon, m as LayoutGrid, n as Wrench, o as Sparkles, p as Linkedin, r as User, s as Server, t as X, u as Monitor, v as Globe, w as Database, x as FileText, y as Github } from "../_libs/lucide-react.mjs";
+import { C as Database, D as Building2, E as Check, O as Briefcase, S as Download, T as ChevronDown, _ as Globe, a as Sun, b as FileText, c as Send, d as Mail, f as Linkedin, g as GraduationCap, h as House, i as Twitter, k as ArrowDown, l as Moon, m as Layers, n as Wrench, o as Sparkles, p as LayoutGrid, r as User, s as Server, t as X, u as MapPin, v as Github, w as Cloud, x as ExternalLink, y as Folder } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-F28gfVyR.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-CVnTfjrG.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function cn(...inputs) {
 	return twMerge(clsx(inputs));
 }
-var options = [
-	{
-		value: "light",
-		label: "Light",
-		icon: Sun
-	},
-	{
-		value: "dark",
-		label: "Dark",
-		icon: Moon
-	},
-	{
-		value: "system",
-		label: "System",
-		icon: Monitor
-	}
-];
+var options = [{
+	value: "light",
+	label: "Light",
+	icon: Sun
+}, {
+	value: "dark",
+	label: "Dark",
+	icon: Moon
+}];
 /** Light / dark / system segmented control. */
 function ThemeToggle({ className }) {
 	const { theme, setTheme } = useTheme();
@@ -148,7 +140,7 @@ function Navigation() {
 							className: cn("relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors", isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"),
 							children: [isActive ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.span, {
 								layoutId: "nav-pill-desktop",
-								className: "absolute inset-0 rounded-full bg-secondary",
+								className: "absolute inset-0 rounded-full bg-black/5 ring-1 ring-black/10 dark:bg-white/15 dark:ring-white/10",
 								transition: {
 									type: "spring",
 									stiffness: 380,
@@ -321,7 +313,7 @@ var glassBadgeVariants = cva("inline-flex items-center gap-1.5 rounded-full font
 		},
 		size: {
 			sm: "px-2.5 py-1 text-[0.7rem]",
-			md: "px-3 py-1.5 text-xs"
+			md: "px-5 py-1.5 text-md"
 		}
 	},
 	defaultVariants: {
@@ -355,7 +347,7 @@ var GlassCard = (0, import_react.forwardRef)(function GlassCard({ className, int
 });
 function SectionHeading({ eyebrow, title, subtitle, align = "left", className }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AnimatedContainer, {
-		className: cn("flex flex-col gap-3", align === "center" && "items-center text-center", className),
+		className: cn("flex flex-col items-start gap-3", align === "center" && "items-center text-center", className),
 		children: [
 			eyebrow ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(GlassBadge, {
 				variant: "accent",
@@ -403,7 +395,7 @@ function About() {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "mt-6 flex items-center gap-2 text-sm text-muted-foreground",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, {
-									className: "size-4 text-primary",
+									className: "size-6 text-primary",
 									"aria-hidden": "true"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: location })]
 							})
@@ -417,7 +409,7 @@ function About() {
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "flex items-center gap-2",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, {
-								className: "size-4 text-primary",
+								className: "size-6 text-primary",
 								"aria-hidden": "true"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 								className: "text-lg font-semibold",
@@ -440,7 +432,7 @@ function About() {
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "flex items-center gap-2",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(GraduationCap, {
-								className: "size-4 text-primary",
+								className: "size-6 text-primary",
 								"aria-hidden": "true"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
 								className: "text-lg font-semibold",
@@ -456,15 +448,15 @@ function About() {
 										children: item.degree
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "mt-1 text-sm text-muted-foreground",
+										className: "mt-1 text-[14px] text-muted-foreground",
 										children: item.institution
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "mt-2 font-mono text-xs text-muted-foreground",
+										className: "mt-2 font-mono text-[13px] text-muted-foreground",
 										children: item.duration
 									}),
 									item.description ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "mt-3 text-sm leading-relaxed text-muted-foreground",
+										className: "mt-3 text-[14px] leading-relaxed text-muted-foreground",
 										children: item.description
 									}) : null
 								]
@@ -629,7 +621,7 @@ function Contact() {
 							href: `mailto:${email}`,
 							className: "mt-1 inline-flex items-center gap-2 font-medium break-all transition-colors hover:text-primary",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, {
-								className: "size-4 shrink-0 text-primary",
+								className: "size-4.5 shrink-0 text-primary",
 								"aria-hidden": "true"
 							}), email]
 						})] }),
@@ -639,7 +631,7 @@ function Contact() {
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 							className: "mt-1 inline-flex items-center gap-2 font-medium",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, {
-								className: "size-4 shrink-0 text-primary",
+								className: "size-4.5 shrink-0 text-primary",
 								"aria-hidden": "true"
 							}), location]
 						})] }),
@@ -840,7 +832,7 @@ function ExperienceTimeline() {
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 					className: "glass absolute top-4 left-0 flex size-10 items-center justify-center rounded-full sm:size-12",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Building2, {
-						className: "size-4 text-primary",
+						className: "size-6 text-primary",
 						"aria-hidden": "true"
 					})
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(GlassCard, {
@@ -875,7 +867,7 @@ function ExperienceTimeline() {
 							className: "mt-5 flex flex-wrap gap-1.5",
 							children: item.technologies.map((tech) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(GlassBadge, {
 								variant: "outline",
-								size: "sm",
+								className: "px-2.5 py-1 text-[12.5px]",
 								children: tech
 							}) }, tech))
 						}) : null
@@ -1130,18 +1122,18 @@ function ProjectCard({ project, onOpen }) {
 				href: project.github,
 				target: "_blank",
 				rel: "noreferrer noopener",
-				className: "inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground",
+				className: "inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Github, {
-					className: "size-3.5",
+					className: "size-5",
 					"aria-hidden": "true"
 				}), "Code"]
 			}) : null, project.demo ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 				href: project.demo,
 				target: "_blank",
 				rel: "noreferrer noopener",
-				className: "inline-flex items-center gap-1.5 text-xs font-medium text-primary transition-opacity hover:opacity-80",
+				className: "inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-opacity hover:opacity-80",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, {
-					className: "size-3.5",
+					className: "size-4.5",
 					"aria-hidden": "true"
 				}), "Live demo"]
 			}) : null]
