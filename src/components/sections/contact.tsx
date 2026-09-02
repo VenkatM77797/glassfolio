@@ -70,7 +70,7 @@ export function Contact() {
                 href={`mailto:${email}`}
                 className="mt-1 inline-flex items-center gap-2 font-medium break-all transition-colors hover:text-primary"
               >
-                <Mail className="size-4 shrink-0 text-primary" aria-hidden="true" />
+                <Mail className="size-4.5 shrink-0 text-primary" aria-hidden="true" />
                 {email}
               </a>
             </div>
@@ -80,7 +80,7 @@ export function Contact() {
                 Based in
               </p>
               <p className="mt-1 inline-flex items-center gap-2 font-medium">
-                <MapPin className="size-4 shrink-0 text-primary" aria-hidden="true" />
+                <MapPin className="size-4.5 shrink-0 text-primary" aria-hidden="true" />
                 {location}
               </p>
             </div>
