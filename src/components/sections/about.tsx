@@ -30,7 +30,7 @@ export function About() {
             <p className="mt-3 leading-relaxed text-muted-foreground">{description}</p>
 
             <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
-              <MapPin className="size-4 text-primary" aria-hidden="true" />
+              <MapPin className="size-6 text-primary" aria-hidden="true" />
               <span>{location}</span>
             </div>
           </GlassCard>
@@ -39,7 +39,7 @@ export function About() {
         <motion.div variants={variants}>
           <GlassCard className="h-full p-6 sm:p-8">
             <div className="flex items-center gap-2">
-              <Sparkles className="size-4 text-primary" aria-hidden="true" />
+              <Sparkles className="size-6 text-primary" aria-hidden="true" />
               <h3 className="text-lg font-semibold">Focus areas</h3>
             </div>
             <ul className="mt-4 flex flex-wrap gap-2">
@@ -56,7 +56,7 @@ export function About() {
           <motion.div variants={variants} className="lg:col-span-3">
             <GlassCard className="p-6 sm:p-8">
               <div className="flex items-center gap-2">
-                <GraduationCap className="size-4 text-primary" aria-hidden="true" />
+                <GraduationCap className="size-6 text-primary" aria-hidden="true" />
                 <h3 className="text-lg font-semibold">Education</h3>
               </div>
 
@@ -67,10 +67,10 @@ export function About() {
                     className="rounded-xl bg-secondary/60 p-5"
                   >
                     <p className="font-medium">{item.degree}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">{item.institution}</p>
-                    <p className="mt-2 font-mono text-xs text-muted-foreground">{item.duration}</p>
+                    <p className="mt-1 text-[14px] text-muted-foreground">{item.institution}</p>
+                    <p className="mt-2 font-mono text-[13px] text-muted-foreground">{item.duration}</p>
                     {item.description ? (
-                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                      <p className="mt-3 text-[14px] leading-relaxed text-muted-foreground">
                         {item.description}
                       </p>
                     ) : null}
