@@ -38,7 +38,7 @@ export function ExperienceTimeline() {
             className="relative pl-12 sm:pl-16"
           >
             <span className="glass absolute top-4 left-0 flex size-10 items-center justify-center rounded-full sm:size-12">
-              <Building2 className="size-4 text-primary" aria-hidden="true" />
+              <Building2 className="size-6 text-primary" aria-hidden="true" />
             </span>
 
             <GlassCard className="p-6">
@@ -69,7 +69,7 @@ export function ExperienceTimeline() {
                 <ul className="mt-5 flex flex-wrap gap-1.5">
                   {item.technologies.map((tech) => (
                     <li key={tech}>
-                      <GlassBadge variant="outline" size="sm">
+                      <GlassBadge variant="outline" className="px-2.5 py-1 text-[12.5px]">
                         {tech}
                       </GlassBadge>
                     </li>
