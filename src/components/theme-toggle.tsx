@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 const options: { value: Theme; label: string; icon: typeof Sun }[] = [
   { value: "light", label: "Light", icon: Sun },
   { value: "dark", label: "Dark", icon: Moon },
-  { value: "system", label: "System", icon: Monitor },
 ];
 
 /** Light / dark / system segmented control. */
