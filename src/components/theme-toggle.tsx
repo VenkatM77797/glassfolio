@@ -16,7 +16,10 @@ export function ThemeToggle({ className }: { className?: string }) {
     <div
       role="radiogroup"
       aria-label="Colour theme"
-      className={cn("glass flex items-center gap-0.5 rounded-full p-1", className)}
+      className={cn(
+        "glass flex items-center gap-0.5 rounded-full border border-[#CBD5E1] bg-[#F1F5F9] p-1 shadow-sm dark:border-white/20 dark:bg-white/10",
+        className
+      )}
     >
       {options.map(({ value, label, icon: Icon }) => {
         const active = theme === value;
